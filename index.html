@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приглашение на свадьбу - Александр и Эльмира</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Infant:wght@300;400;500;600;700&family=Marck+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-display: "Cormorant Infant", Georgia, serif;
+      --font-serif: "Cormorant Garamond", Georgia, serif;
+      --font-script: "Marck Script", cursive;
+      --font-script-thin: "Bad Script", cursive;
+      --bg-dark: #2f0f17;
+      --paper: #f4f1f2;
+      --paper-deep: #ece8ea;
+      --ink: #211a1d;
+      --muted: #72686e;
+      --accent: #d8b9aa;
+      --accent-strong: #cda695;
+      --line: #d9ccd1;
+      --good: #93c7f0;
+      --section-width: min(92vw, 414px);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --shadow-soft: 0 16px 45px rgba(22, 10, 13, 0.25);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-serif);
+      color: var(--ink);
+      background: radial-gradient(circle at top, #451821 0, var(--bg-dark) 40%, #240a10 100%);
+      line-height: 1.25;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .site {
+      width: 100%;
+      padding: 22px 0 40px;
+    }
+
+    .section {
+      width: var(--section-width);
+      margin: 0 auto 12px;
+      background: var(--paper);
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      padding: 36px 28px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .cover {
+      min-height: 780px;
+      background:
+        radial-gradient(circle at 10% 8%, rgba(255, 255, 255, 0.75) 0 10px, transparent 12px),
+        radial-gradient(circle at 92% 12%, rgba(255, 255, 255, 0.7) 0 8px, transparent 10px),
+        radial-gradient(circle at 12% 94%, rgba(255, 255, 255, 0.75) 0 10px, transparent 12px),
+        radial-gradient(circle at 85% 90%, rgba(255, 255, 255, 0.7) 0 9px, transparent 11px),
+        linear-gradient(145deg, #f5f5f5 0, #eceaea 45%, #f7f6f4 100%);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 48px;
+      padding-bottom: 42px;
+    }
+
+    .micro-title {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: #2f2a2c;
+      margin: 0;
+    }
+
+    .names {
+      margin: 0;
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: clamp(34px, 7vw, 48px);
+      line-height: 1.12;
+      font-weight: 300;
+    }
+
+    .amp {
+      display: block;
+      text-transform: none;
+      font-family: var(--font-script-thin);
+      font-size: clamp(38px, 8.8vw, 58px);
+      line-height: 0.94;
+      letter-spacing: 0.01em;
+      margin: 14px 0;
+      font-weight: 400;
+    }
+
+    .date-script {
+      margin: 0;
+      font-family: var(--font-script);
+      font-size: clamp(36px, 8vw, 46px);
+      font-weight: 400;
+      color: #2a2728;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-top: 16px;
+      align-items: start;
+    }
+
+    .count-block {
+      text-align: center;
+    }
+
+    .count-value {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 5.2vw, 38px);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+
+    .count-label {
+      font-family: var(--font-serif);
+      margin-top: 4px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #322b2e;
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      font-family: var(--font-display);
+      text-align: center;
+      font-size: clamp(24px, 5.6vw, 44px);
+      font-weight: 500;
+      line-height: 1.12;
+      color: #59525a;
+    }
+
+    #welcome {
+      padding: 52px 34px 44px;
+    }
+
+    #welcome .section-title {
+      margin-bottom: 28px;
+    }
+
+    #welcome .section-text {
+      margin-bottom: 26px;
+      max-width: 320px;
+      line-height: 1.32;
+    }
+
+    #confirm .section-title {
+      font-family: var(--font-script);
+      font-weight: 400;
+      color: #575158;
+    }
+
+    .note .section-title-small {
+      color: #2f2a2d;
+    }
+
+    .section-title-small {
+      margin: 2px 0 0;
+      font-family: var(--font-display);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-size: clamp(22px, 5.2vw, 36px);
+      font-weight: 600;
+      color: #8e8e8e;
+      line-height: 1.05;
+    }
+
+    .section-text {
+      margin: 0 auto 14px;
+      font-family: var(--font-serif);
+      text-align: center;
+      color: #2f292c;
+      max-width: 340px;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.24;
+    }
+
+    .section-text-small {
+      font-size: 16px;
+      line-height: 1.28;
+      color: #3f383c;
+    }
+
+    #wishes .section-text-small,
+    #confirm > .section-text-small {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .script-line {
+      margin: 10px auto 18px;
+      text-align: center;
+      max-width: 340px;
+      font-family: var(--font-script);
+      font-size: clamp(32px, 7.1vw, 44px);
+      line-height: 1.02;
+      color: #3b3538;
+      font-weight: 400;
+    }
+
+    .portrait-pair {
+      display: grid;
+      gap: 32px;
+      margin-top: 4px;
+    }
+
+    .portrait-card {
+      text-align: center;
+      padding: 0 8px;
+    }
+
+    .portrait-name {
+      margin: 0 0 18px;
+      font-size: clamp(34px, 7.2vw, 44px);
+      font-family: var(--font-script);
+      font-weight: 400;
+      color: #575158;
+    }
+
+    .portrait-frame {
+      width: min(250px, 78%);
+      aspect-ratio: 3 / 4;
+      margin: 0 auto;
+      border-radius: 120px;
+      border: 4px solid #d7c6ca;
+      background: #e8e2e4;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .portrait-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .portrait-photo--elmira {
+      width: 165%;
+      height: 165%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -46%);
+      object-position: center 32%;
+    }
+
+    .section-illustration {
+      width: min(120px, 62%);
+      margin: 0 auto 18px;
+    }
+
+    .section-illustration img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .separator-title {
+      margin: 0;
+      font-family: var(--font-display);
+      text-align: center;
+      font-size: clamp(24px, 5.6vw, 38px);
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: #2f2a2d;
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid #dfd4d8;
+    }
+
+    .calendar-card {
+      border: 2px solid #cfbcc2;
+      border-radius: 28px;
+      padding: 20px 16px 16px;
+      max-width: 360px;
+      margin: 16px auto 0;
+      background: linear-gradient(180deg, #f7f3f4 0, #f3eff1 100%);
+    }
+
+    .month {
+      text-align: center;
+      margin: 0 0 10px;
+      font-size: clamp(40px, 9vw, 54px);
+      color: #4f464c;
+      font-family: var(--font-script);
+      font-weight: 400;
+    }
+
+    .weekdays, .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+      text-align: center;
+    }
+
+    .weekdays span {
+      font-family: var(--font-serif);
+      font-size: 14px;
+      font-weight: 500;
+      color: #7b6f75;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .days span {
+      font-family: var(--font-display);
+      padding: 5px 0;
+      font-size: 28px;
+      font-weight: 500;
+      color: #362f34;
+      min-height: 36px;
+      display: grid;
+      place-items: center;
+    }
+
+    .days span.empty { color: transparent; }
+
+    .days span.highlight {
+      border: 2px solid #cdb3b8;
+      border-radius: 50%;
+      color: #493f45;
+      width: 40px;
+      height: 40px;
+      margin: 0 auto;
+    }
+
+    .palette-box {
+      border: 3px solid #3b2f35;
+      padding: 18px 12px 16px;
+      margin: 12px auto 18px;
+      max-width: 360px;
+      text-align: center;
+    }
+
+    .palette-title {
+      margin: 0 0 12px;
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.3;
+      color: #30272c;
+    }
+
+    .palette {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 6px;
+    }
+
+    .swatch {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(33, 26, 29, 0.2);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    }
+
+    .swatch:nth-child(1) { background: #c79d71; }
+    .swatch:nth-child(2) { background: #6d3d2f; }
+    .swatch:nth-child(3) { background: #72524b; }
+    .swatch:nth-child(4) { background: #6f7c35; }
+    .swatch:nth-child(5) { background: #c0b87f; }
+
+    .confirm-link-wrap {
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    .guest-chat {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid #dfd4d8;
+      text-align: center;
+    }
+
+    .guest-chat__title {
+      margin: 0 0 14px;
+      font-family: var(--font-display);
+      font-size: clamp(26px, 5.8vw, 36px);
+      font-weight: 600;
+      line-height: 1.1;
+      color: #2f2a2d;
+    }
+
+    .guest-chat__text {
+      margin: 0 auto 20px;
+      max-width: 320px;
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.32;
+      color: #4a4347;
+    }
+
+    .guest-chat__btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #211a1d;
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.16s ease;
+    }
+
+    .guest-chat__btn:hover {
+      background: #3a3034;
+      transform: translateY(-1px);
+    }
+
+    .guest-chat__btn:active {
+      transform: translateY(0);
+    }
+
+    .confirm-link {
+      font-family: var(--font-serif);
+      color: #6f4c58;
+      font-size: 18px;
+      font-style: italic;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1px;
+    }
+
+    .confirm-link:hover {
+      color: #5f3f4b;
+    }
+
+    .timeline-title {
+      margin: 0 0 14px;
+      font-family: var(--font-serif);
+      text-align: center;
+      font-size: clamp(30px, 6.2vw, 40px);
+      color: #d8c8cd;
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 360px;
+      margin: 0 auto;
+      padding-top: 16px;
+      padding-bottom: 10px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #2f2b2e;
+      transform: translateX(-50%);
+    }
+
+    .timeline-date {
+      width: fit-content;
+      margin: 0 auto 14px;
+      font-family: var(--font-display);
+      border: 3px solid #2d292c;
+      border-radius: 999px;
+      padding: 4px 20px 6px;
+      font-size: clamp(28px, 6vw, 36px);
+      font-weight: 600;
+      background: #f7f4f5;
+      position: relative;
+      z-index: 1;
+    }
+
+    .event {
+      position: relative;
+      width: 50%;
+      padding: 8px 10px 10px;
+      margin-bottom: 12px;
+    }
+
+    .event::after {
+      content: "";
+      position: absolute;
+      top: 38px;
+      width: 24px;
+      border-top: 3px solid #2f2b2e;
+    }
+
+    .event.left { left: 0; text-align: left; }
+    .event.left::after { right: -12px; }
+    .event.right { left: 50%; text-align: right; }
+    .event.right::after { left: -12px; }
+
+    .event-icon {
+      font-size: 42px;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .event-time {
+      font-family: var(--font-display);
+      font-size: 44px;
+      line-height: 1;
+      margin: 0;
+      font-weight: 700;
+      color: #171215;
+    }
+
+    .event-name {
+      margin: 4px 0 0;
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.06;
+      color: #2e282c;
+    }
+
+    .heart-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50% 50% 0 50%;
+      transform: rotate(45deg);
+      background: #d3b3bc;
+      margin: 4px auto 10px;
+      position: relative;
+      left: 50%;
+      translate: -50% 0;
+    }
+
+    .map-box {
+      margin-top: 18px;
+      border: 1px solid #d2c7cc;
+      border-radius: var(--radius-lg);
+      background: #f7f2f4;
+      overflow: hidden;
+    }
+
+    .map-embed {
+      width: 100%;
+      line-height: 0;
+      background: #eef5ea;
+    }
+
+    .map-embed iframe {
+      display: block;
+      width: 100%;
+      height: 320px;
+      border: 0;
+    }
+
+    .map-footer {
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-family: var(--font-serif);
+      font-size: 15px;
+      color: #3c3639;
+      background: #f7f2f4;
+    }
+
+    .map-link {
+      font-family: var(--font-serif);
+      text-decoration: none;
+      color: #8b2e37;
+      font-weight: 600;
+    }
+
+    .floating-nav {
+      position: fixed;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: grid;
+      gap: 8px;
+      z-index: 10;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      opacity: 0.8;
+      transition: all 0.2s ease;
+    }
+
+    .dot.active {
+      width: 13px;
+      height: 13px;
+      opacity: 1;
+      background: #f4dde2;
+      border-color: #eed3d9;
+    }
+
+    .footer {
+      width: var(--section-width);
+      margin: 18px auto 0;
+      font-family: var(--font-serif);
+      text-align: center;
+      color: #d3c7cb;
+      font-size: 15px;
+      padding-bottom: 10px;
+    }
+
+    @media (max-width: 480px) {
+      .section { padding: 28px 18px; }
+      #welcome { padding: 40px 24px 36px; }
+      #welcome .section-title { margin-bottom: 22px; }
+      #welcome .section-text { margin-bottom: 22px; }
+      #welcome .script-line { margin-bottom: 32px; }
+      .days span { font-size: 24px; }
+      .event-time { font-size: 38px; }
+      .event-icon { font-size: 34px; }
+      .section-text { font-size: 16px; }
+      .script-line { font-size: 34px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="floating-nav" aria-label="Навигация по секциям">
+    <a class="dot" href="#cover" aria-label="Обложка"></a>
+    <a class="dot" href="#welcome" aria-label="Приглашение"></a>
+    <a class="dot" href="#wishes" aria-label="Пожелания"></a>
+    <a class="dot" href="#confirm" aria-label="Подтверждение"></a>
+    <a class="dot" href="#timeline" aria-label="Расписание"></a>
+    <a class="dot" href="#location" aria-label="Карта"></a>
+  </nav>
+
+  <main class="site">
+    <section id="cover" class="section cover">
+      <p class="micro-title">Приглашение на свадьбу</p>
+      <h1 class="names">
+        АЛЕКСАНДР
+        <span class="amp">and</span>
+        ЭЛЬМИРА
+      </h1>
+      <div>
+        <p class="date-script">21.08.2026</p>
+        <div class="countdown" id="countdown" aria-live="polite">
+          <div class="count-block"><div class="count-value" data-part="weeks">00</div><div class="count-label">недель</div></div>
+          <div class="count-block"><div class="count-value" data-part="days">00</div><div class="count-label">дней</div></div>
+          <div class="count-block"><div class="count-value" data-part="hours">00</div><div class="count-label">часов</div></div>
+          <div class="count-block"><div class="count-value" data-part="minutes">00</div><div class="count-label">минут</div></div>
+          <div class="count-block"><div class="count-value" data-part="seconds">00</div><div class="count-label">секунд</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="welcome" class="section">
+      <h2 class="section-title">Дорогой<br>Гость!</h2>
+      <p class="section-text">Мы рады сообщить Вам, что состоится самое главное торжество в нашей жизни - день нашей свадьбы!</p>
+      <p class="script-line">Там, где начинается любовь,<br>растет радость!</p>
+      <div class="portrait-pair">
+        <article class="portrait-card">
+          <h3 class="portrait-name">Александр</h3>
+          <div class="portrait-frame">
+            <!-- Замените src на путь к фото Александра -->
+            <img class="portrait-photo" src="assets/igPoSTi8F-jDeVokWfk_5lG-RqOmxyEW8H3bt4L1DRO5qVd-_r2V9zYArD4rGOFoiJnfkaUWzN9OI3Xlf6sRIzAP.jpg" alt="Александр">
+          </div>
+        </article>
+        <article class="portrait-card">
+          <h3 class="portrait-name">Эльмира</h3>
+          <div class="portrait-frame">
+            <!-- Замените src на путь к фото Эльмиры -->
+            <img class="portrait-photo portrait-photo--elmira" src="assets/DJDYZsSfsONjVJ9KuAHD0S8CV1UYKCKueci5PL4_uJrNtAlDjVMXp6CaEZTuNzKeZ98j6G4WjTAjzQa3GeT40LDy.jpg" alt="Эльмира">
+          </div>
+        </article>
+      </div>
+
+    </section>
+
+    <section id="wishes" class="section">
+      <figure class="section-illustration">
+        <!-- Замените src на фото тарелки с приборами -->
+        <img src="assets/png-klev-club-p-tarelka-png-34-no-bg-preview (carve.photos).png" alt="">
+      </figure>
+      <h2 class="separator-title">ПОЖЕЛАНИЯ ПО ПОДАРКАМ</h2>
+      <p class="section-text section-text-small">Ваше присутствие в день нашей свадьбы - самый значимый подарок для нас!</p>
+      <p class="section-text section-text-small">Мы понимаем, что дарить цветы на свадьбу - это традиция, но мы не сможем наслаждаться их красотой в полной мере.</p>
+      <p class="section-text section-text-small">Будем рады любой другой альтернативе (бутылочка любого алкоголя, с Вашими пожеланиями на ней и датой открытия).</p>
+
+      <div class="note">
+        <h3 class="section-title-small">ПРИМЕЧАНИЕ</h3>
+        <p class="section-text section-text-small">Будем благодарны, если Вы воздержитесь от криков "Горько" на празднике.</p>
+      </div>
+    </section>
+
+    <section id="confirm" class="section">
+      <figure class="section-illustration">
+        <!-- Замените src на фото колец -->
+        <img src="assets/1575297888_1-no-bg-preview (carve.photos).png" alt="">
+      </figure>
+      <h2 class="separator-title">ПОДТВЕРЖДЕНИЕ</h2>
+      <p class="section-text section-text-small">Пожалуйста, подтвердите свое присутствие до <strong>17.07.2026</strong></p>
+
+      <div class="calendar-card">
+        <h3 class="month">Август</h3>
+        <div class="weekdays">
+          <span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span>
+        </div>
+        <div class="days">
+          <span class="empty">0</span><span class="empty">0</span><span class="empty">0</span><span class="empty">0</span><span class="empty">0</span><span>1</span><span>2</span>
+          <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+          <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+          <span>17</span><span>18</span><span>19</span><span>20</span><span class="highlight">21</span><span>22</span><span>23</span>
+          <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+          <span>31</span><span class="empty">0</span><span class="empty">0</span><span class="empty">0</span><span class="empty">0</span><span class="empty">0</span><span class="empty">0</span>
+        </div>
+      </div>
+
+      <h3 class="section-title" style="margin-top:20px;">Ждем Вас!</h3>
+      <div class="palette-box">
+        <p class="palette-title">Будем благодарны, если при выборе нарядов на наше торжество Вы придержитесь следующей палитры</p>
+        <div class="palette" aria-label="Цветовая палитра дресс-кода">
+          <span class="swatch"></span>
+          <span class="swatch"></span>
+          <span class="swatch"></span>
+          <span class="swatch"></span>
+          <span class="swatch"></span>
+        </div>
+      </div>
+
+      <div class="guest-chat">
+        <h3 class="guest-chat__title">Чат гостей</h3>
+        <p class="guest-chat__text">Присоединяйтесь к нашему каналу в Telegram и делитесь своими впечатлениями, фотографиями и видео с мероприятия!</p>
+        <!-- Замените href на ссылку вашего Telegram-канала или чата -->
+        <a class="guest-chat__btn" href="https://t.me/" target="_blank" rel="noreferrer noopener">Присоединиться</a>
+      </div>
+
+      <div class="confirm-link-wrap">
+        <a class="confirm-link" href="https://forms.yandex.ru/" target="_blank" rel="noreferrer noopener">Перейти к подтверждению</a>
+      </div>
+    </section>
+
+    <section id="timeline" class="section">
+      <h2 class="timeline-title">Свадебное расписание</h2>
+      <div class="timeline">
+        <p class="timeline-date">21.08.2026</p>
+        <article class="event left">
+          <p class="event-time">15:30</p>
+          <p class="event-name">Сбор гостей</p>
+        </article>
+        <article class="event right">
+          <p class="event-time">15:45</p>
+          <p class="event-name">Фуршет</p>
+        </article>
+        <article class="event left">
+          <p class="event-time">16:00</p>
+          <p class="event-name">Торжественная регистрация</p>
+        </article>
+        <article class="event right">
+          <p class="event-time">16:30</p>
+          <p class="event-name">Фотосессия</p>
+        </article>
+        <article class="event left">
+          <p class="event-time">17:00</p>
+          <p class="event-name">Праздничный банкет</p>
+        </article>
+        <article class="event right">
+          <p class="event-time">23:00</p>
+          <p class="event-name">Окончание праздничного дня</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="location" class="section">
+      <h2 class="separator-title">ЛОКАЦИЯ</h2>
+      <p class="section-text section-text-small">Нажмите кнопку, чтобы открыть маршрут в картах</p>
+      <div class="map-box">
+        <div class="map-embed">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/-/CTQJYP0z"
+            title="Карта места проведения"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="map-footer">
+          <span>Открыть в Яндекс Картах</span>
+          <a class="map-link" href="https://yandex.ru/maps/-/CTQJYP0z" target="_blank" rel="noreferrer noopener">Перейти</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">С любовью, Александр и Эльмира</footer>
+
+  <script>
+    (function () {
+      const targetDate = new Date("2026-08-21T15:30:00+03:00").getTime();
+      const parts = {
+        weeks: document.querySelector('[data-part="weeks"]'),
+        days: document.querySelector('[data-part="days"]'),
+        hours: document.querySelector('[data-part="hours"]'),
+        minutes: document.querySelector('[data-part="minutes"]'),
+        seconds: document.querySelector('[data-part="seconds"]')
+      };
+
+      function pad(value) {
+        return String(value).padStart(2, "0");
+      }
+
+      function updateCountdown() {
+        const now = Date.now();
+        let delta = Math.max(0, targetDate - now);
+        const weekMs = 7 * 24 * 60 * 60 * 1000;
+        const dayMs = 24 * 60 * 60 * 1000;
+        const hourMs = 60 * 60 * 1000;
+        const minuteMs = 60 * 1000;
+        const secondMs = 1000;
+
+        const weeks = Math.floor(delta / weekMs);
+        delta -= weeks * weekMs;
+        const days = Math.floor(delta / dayMs);
+        delta -= days * dayMs;
+        const hours = Math.floor(delta / hourMs);
+        delta -= hours * hourMs;
+        const minutes = Math.floor(delta / minuteMs);
+        delta -= minutes * minuteMs;
+        const seconds = Math.floor(delta / secondMs);
+
+        parts.weeks.textContent = pad(weeks);
+        parts.days.textContent = pad(days);
+        parts.hours.textContent = pad(hours);
+        parts.minutes.textContent = pad(minutes);
+        parts.seconds.textContent = pad(seconds);
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      const dots = Array.from(document.querySelectorAll(".dot"));
+      const sections = dots.map((dot) => document.querySelector(dot.getAttribute("href")));
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const index = sections.indexOf(entry.target);
+          dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+        });
+      }, { threshold: 0.45 });
+
+      sections.forEach((section) => observer.observe(section));
+    }());
+  </script>
+</body>
+</html>
